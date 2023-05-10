@@ -1,13 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 </head>
-<body>
-    hello world
-http://www.facey-fifty.uk/
-    </body>
+<body><header class="site-header">
+              </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title"></h1>
+  </header>
+
+  <div class="post-content">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
+
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+
+<script src="https://unpkg.com/@mapbox/polyline@1.1.0/src/polyline.js" integrity="sha384-IDEhh/gOCXy+ASeq3Kr88jdsZ5XSXKUvq9WTPOGjKIZlEiZiJAZwd+GAnY3XDqLW" crossorigin=""></script>
+
+<div id="map" style="height: 100vh">
+</div>
+
+<script>
+    (function(L) {
+       const routes = [{
+                "title": "No 16 - White Hill/Shaw Field Lane, West Slaithwaite",
+                "url": "/climbs/16-White-Hill-Shaw-Field-Lane,-West-Slaithwaite.html",
+                "polyline": "stffIbisJSTQh@KHWUAGBj@G@GA_@JMHE?]\\UFO?Y^[R[XIPq@ZIC[]]o@]mA[}@EYS_@Kc@A_@KYO{@Sc@MuAIIc@EECSDCCMBSEk@uAIMMGGAKHATFz@?l@Jd@@NEj@EPKPSBUAg@@_BVe@LIDm@bA_D~D"
+            },{
+                "title": "No 26 - Brockholes Lane, Brockholes",
+                "url": "/climbs/26-Brockholes-Lane,-Brockholes.html",
+                "polyline": "krbfIdayIISKgAQi@Yi@SmAD_AH}@?_AGOGWUYe@U_ABoAFW?e@Gw@m@q@MGISKk@DMAOGMQKAsA?m@WMCUFKASEg@FQAMHK?k@LcAFOGu@s@IKUg@UW]u@_@qAGSECC_@Io@O_@Qy@w@qA_Ak@c@c@[e@y@kBg@}A[y@OOQGWKMAYIEEQaC?e@D}@CWOWi@_@gAgAo@w@k@_AUc@c@eAsAmDg@wAUw@mBiJQuAMe@Yu@i@qBm@oD]mAKk@GO"
+            },{
+                "title": "No 32 - V9912 Jackson Bridge Hill Climb, South View/Staley Royd Lane, Jackson Bridge",
+                "url": "/climbs/32-V9912-Jackson-Bridge-Hill-Climb,-South-View-Staley-Royd-Lane,-Jackson-Bridge.html",
+                "polyline": "cq|eIh~tI@OK}@Cu@DcA?eAEMECG?oAd@u@Ty@B[D]TY~@EDGAGKAQKcBEOKQECg@KIKEMQ_AGcAGcDDwBDc@FUj@oAZ}@d@}CNm@ReAHQl@aARm@|@oBPkADgAJm@@m@WiCIoCHABc@Da@EMNw@Jy@b@wBHw@?oACK?i@Eu@@{EIqAFKJId@I|@Ib@ONW^gA\\g@d@_@b@U^KN@VGVAXKp@w@T]"
+            },{
+                "title": "No 34 - Thong Lane/Giles Lane/Miry Lane, Netherthong",
+                "url": "/climbs/34-Thong-Lane-Giles-Lane-Miry-Lane,-Netherthong.html",
+                "polyline": "iv`fItmzIIAGDQp@Ij@K`BGRE`@@FEpA]hACVBvDZbC?f@PxCAp@En@UjAWvBC~@@^JfAb@zBd@hBR|@^vALl@HdANjEA^CC?GDEx@dCQr@Wd@I^QlCu@|BUdACPAlDF`DC~@OdBQnAYhAUlBWrAIZe@r@EL_@b@Uf@k@p@UPUDEH[XGJKt@MVSj@[XQZq@n@}BfB"
+            },{
+                "title": "No 36 - Dunford Road, Holmfirth",
+                "url": "/climbs/36-Dunford-Road,-Holmfirth.html",
+                "polyline": "gz}eIxy{I@KLYCIZs@Lk@Xq@tA{BrBmD~@uAjAsAl@cAZ_@ZIz@c@l@MTMHKRMxAYr@IJGfA]d@FrBg@|@]VG`BWxAMd@O|ADjAC`@EREdAc@POJO`@KTKHGLALKp@I`AARET?j@OPMNSj@uAf@o@p@uARYX[r@UlAORA|ASVDpDvAzT~Hh@Xn@NfCpAzBrAt@^`@Jl@Fb@I`@Qr@_@f@e@"
+            },{
+                "title": "No 37 - Rotcher Road/Cemetery Road - National Cycle route 68",
+                "url": "/climbs/37-Rotcher-Road-Cemetery-Road-National-Cycle-route-68.html",
+                "polyline": "iy}eIh}{IH^@`@DNLPJVXVNj@p@v@ZRFBt@ALCLKPCNDVZLd@RX`Bz@bAv@^n@Lb@Ff@TvAhA`Cd@t@\\Zz@`@PPTNXr@~@zAfAdCf@v@`@ZPBv@B`@PHb@X~@ZvBJh@h@lBLXnAfCVXTTtA~B^`@NZXb@hBxD^p@v@bATFFCRU\\m@PSd@[zBk@J?JFNLRZx@vBZd@hBtDfCtEn@rA^j@f@r@TJXR~DrD~@fA\\t@TXlDpEj@d@LFf@\\tArA`Az@rBfAd@PbAf@dBl@rCp@bF~Ab@DtB\\~@BjAPpAFPD~@d@LB\\?xC_Br@Ut@c@bA]`CcA|Ai@bCeAb@KvAm@NEx@_@nCcA`Bq@`Ba@^Gr@Gd@M\\@j@E`C]fGq@f@IrAOv@Ef@I\\QRSPUd@_An@eBn@uBXs@t@oAjA}C\\kA|@oBVkALaBRqA^_BPiAVgC?c@"
+            },{
+                "title": "No 40 - Woodside View/Shaw Lane/Booth House Lane, Burnlee, Holmfirth",
+                "url": "/climbs/40-Woodside-View-Shaw-Lane-Booth-House-Lane,-Burnlee,-Holmfirth.html",
+                "polyline": "s~|eItj_Jh@@TETJHNEVEpAUzCAZDd@HBp@@`@HRHZd@d@|@Lp@ENk@`@e@Tg@LaBNUHEHEJMv@I`AKvBM^o@t@QJMr@[~@Gh@Aj@QvB]zB]~AY|@u@~Aa@pBWXc@^IPQnCCrBBNJd@Bn@c@hCEdFOpAAdAYvCUzAWvBg@pCQtAK|ACjA?rDH~@Nd@JPb@h@f@`@LVRHd@CN@b@VT\\XdAJhAVbBJXrAnCf@rA~@|B"
+            },{
+                "title": "No 42 - Dobb Lane/Woodhouse Lane, Hinchliffe Mill",
+                "url": "/climbs/42-Dobb-Lane-Woodhouse-Lane,-Hinchliffe-Mill.html",
+                "polyline": "c{{eIhy`J`@DDDlBfBRVN\\n@fCVp@^h@RHXDlADh@DVC`@KH@PE`@MTEXINK`@KB@v@GZEZKVUJORk@D[NMN]JIx@Wf@YNQVDZOXBLANGH?PKf@IJGf@a@XMf@EFI@CCOm@o@W]IUOc@]cBIw@GUI[[c@MYy@gDEYDo@VkBFiADKTSXMVIDGKID@G?KQABz@\\PEj@U|@QjAIrAE\\@VE@@"
+            },{
+                "title": "No 43 - Field End Lane, via Digley reservoir, Holmbridge",
+                "url": "/climbs/43-Field-End-Lane,-via-Digley-reservoir,-Holmbridge.html",
+                "polyline": "kn{eIzebJI\\Et@Gd@JrGC~@Kp@GJIZQZI^Wh@KZCVSv@Ef@@tCRvAHz@CxAUhESdBMbBWxBCb@BvDKlGA~BBvA?z@YvB[pAKTa@`@w@Xo@LWJ_@\\Ul@eA|EMd@MPEFk@Z]@iAUUOu@eAQEQ@a@FO?_@MYQCO?g@E[?y@Es@I{DEUGIQGKAw@Pg@Nm@Lg@B_AJk@Bk@IUMmAgASIUH]d@mBfBw@h@e@NY@i@Cc@Eu@Ui@Ya@Y"
+            },{
+                "title": "No 44 - Holme Moss, Holmbridge",
+                "url": "/climbs/44-Holme-Moss,-Holmbridge.html",
+                "polyline": "yg{eIxkbJjArBAFLn@\\pA\\`BRd@d@bDXhDH`C?|AFtB@vAf@~B@^^zED^Pl@^`Ad@`AdBfBhB~Bz@|AnAvCz@rC^zAr@nBh@jBj@pA^p@f@~A\\pAbAjExA~EJpAAr@Xt@Px@l@v@~@n@h@l@~@lAjB~Ch@t@N^bA`EjB|KZfCFdAAFBfALvA@vADb@z@`Dv@dBV^n@p@hBbAbA\\~@JNCJMFSFkA@kAB]Je@JQRGJBLFl@d@PDPGTQTs@P_A`@}DR{ATiAL_@PWVMRFXj@|ChVPbALl@Pj@LTPTNDT@VIJGNQ`@o@r@w@^WZMj@CVBp@?t@F`@HbBrAV^h@`AlDrHZf@jApATZrElI|AtBPPz@d@b@R`@Tj@j@TLd@Jn@Dn@Ar@I`AYnA}@\\O\\Kf@Eh@D\\FFCDSMa@DVRj@l@ZtBpAh@^f@p@`@t@n@`A|@`B"
+            }]
+
+       const myMap = L.map('map').setView([53.6077, -1.8079], 12);     
+       L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}{r}?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 18,
+            id: 'mapbox/outdoors-v11',
+            tileSize: 512,
+            zoomOffset: -1,
+            accessToken: 'pk.eyJ1IjoiZGF2aWRhcmtlbXAiLCJhIjoidUkwVnZIWSJ9.mCLcitoDx8zvccKNS6-tEA'
+        }).addTo(myMap);
+       
+       let mapBounds = myMap.getBounds();
+       for(var i = 0; i < routes.length; ++i) {
+           const layer = L.polyline(polyline.decode(routes[i].polyline), { color: 'red', weight: 4 });
+           mapBounds.extend(layer.getBounds());
+           layer.addTo(myMap);
+           layer.bindPopup("<a href='"+routes[i].url+"'>" + routes[i].title + "</a>")
+           layer.on('popupopen', () => {
+               layer.setStyle({color: 'grey', weight: 5, opacity: 1 });
+               myMap.fitBounds(layer.getBounds());
+           });
+           layer.on('popupclose', () => {
+               layer.setStyle({color: 'grey', weight: 3 });
+               myMap.fitBounds(mapBounds);
+               
+           });
+       }
+       myMap.fitBounds(mapBounds, { padding: [5, 5], animate: false });
+    })(L);
+</script>
+
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p>Facey Fifty is Richard Facey&#39;s selection of 50 climbs in the  Colne and Holme valleys around Huddersfield</p>
+      </div>
+
+      <div class="footer-col">
+        <blockquote>
+
+           My attempt to show completed and uncompleted routes
+      </div>
+    </div>
+
+    
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
 </html>
